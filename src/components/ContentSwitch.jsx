@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
   root:{
     paddingTop: '1.2em',
     paddingBottom: '1.2em',
-    backgroundColor: 'grey',
   },
 }));
 

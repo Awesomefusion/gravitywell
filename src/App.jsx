@@ -7,8 +7,10 @@ import { Grid, Typography, AppBar, Toolbar, BottomNavigation, Container } from "
 import Navigation from "./components/Navbar"
 import ContentSwitch from "./components/ContentSwitch"
 
+
 const useStyles = makeStyles((theme) => ({
   root:{
+    
   },
 }));
 
