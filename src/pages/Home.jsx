@@ -1,13 +1,13 @@
 import React from 'react';
 import { Grid, Typography  } from "@material-ui/core"
-import { useStyles } from '../styles/styles.jsx'
+import { useStyles } from '../styles/divStyles.jsx'
 
 function Home() {
 
   const classes = useStyles();
   
   return (
-    <div className={classes.whiteDiv}>
+    <div className={classes.consDiv}>
         <Grid container direction="column">
           <Grid container>
 

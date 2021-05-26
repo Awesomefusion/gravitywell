@@ -1,21 +1,13 @@
 import React from 'react';
 
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
-import { makeStyles } from "@material-ui/core/styles"
+import { BrowserRouter as Router } from "react-router-dom"
 
 import Navigation from "./components/Navbar"
 import ContentSwitch from "./components/ContentSwitch"
 
 
-const useStyles = makeStyles((theme) => ({
-  root:{
-    
-  },
-}));
-
 function App() {
 
-  const classes = useStyles();
   
   return (
     <div>

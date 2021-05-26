@@ -5,10 +5,12 @@ const useStyles = makeStyles({
     consDiv: {
         backgroundImage: `url(${consbg})`,
         padding: '1.6em',
+        color: 'white',
     },
     whiteDiv: {
         backgroundColor: 'white',
         padding: '1.6em',
+        color: 'black',
     },
 });
 

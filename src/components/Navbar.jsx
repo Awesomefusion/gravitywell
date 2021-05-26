@@ -43,7 +43,6 @@ function Navbar() {
   const classes = useStyles();
 
   const navLinks = [
-    { title: 'Home', path: '/'},
     { title: 'About', path: '/about'},
   ]
 
@@ -69,6 +68,10 @@ function Navbar() {
       <div>
         <Toolbar className={classes.navBar}>
           <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
+
+            <IconButton edge="start" color="inherit" aria-label="menu" size="large" component={RouterLink} to='/'>
+              <HomeIcon size="large"/>
+            </IconButton>
 
             <List component="nav" aria-labelledby="main navigation" className={classes.navDisplayFlex}>
               {navLinks.map(({ title, path }) => (
@@ -121,6 +124,10 @@ function Navbar() {
       <div>
         <Toolbar className={classes.navBar}>
           <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
+
+          <IconButton edge="start" color="inherit" aria-label="menu" size="large" component={RouterLink} to='/'>
+              <HomeIcon size="large"/>
+            </IconButton>
 
             <IconButton
             {...{
