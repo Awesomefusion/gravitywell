@@ -8,6 +8,7 @@ import About from "../pages/About"
 
 const useStyles = makeStyles((theme) => ({
   root:{
+    backgroundColor: 'white',
   },
 }));
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { Link as RouterLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles"
-import { AppBar, Toolbar, IconButton, List, Container, MenuItem, Drawer, Link  } from "@material-ui/core"
+import { AppBar, Toolbar, IconButton, List, MenuItem, Drawer, Link, Typography  } from "@material-ui/core"
 import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -17,14 +17,11 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none !important',
     justifyContent: 'space-between',
   },
-  navbarDisplayFlex: {
-    display: 'flex',
-    textDecoration: 'none !important',
-  },
   desktopLinkText: {
     textDecoration: 'none !important',
     textTransform: 'uppercase',
     color: 'white',
+    fontSize: '1.5rem',
   },
   mobileLinkText: {
     textDecoration: 'none !important',
@@ -33,6 +30,13 @@ const useStyles = makeStyles((theme) => ({
   },
   iconNav:{
     paddingLeft: '0px',
+  },
+  desktopTitle:{
+    padding: '1rem',
+    marginRight: '2rem',
+  },
+  mobileTitle:{
+    flex: '1',
   }
 }));
 
@@ -67,10 +71,13 @@ function Navbar() {
     return (
       <div>
         <Toolbar className={classes.navBar}>
-          <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
 
-            <IconButton edge="start" color="inherit" aria-label="menu" size="large" component={RouterLink} to='/'>
-              <HomeIcon size="large"/>
+            <Typography variant="h4" className={classes.desktopTitle}>
+              Gravity Well
+            </Typography>
+
+            <IconButton edge="start" color="inherit" aria-label="menu" component={RouterLink} to='/'>
+              <HomeIcon fontSize="large"/>
             </IconButton>
 
             <List component="nav" aria-labelledby="main navigation" className={classes.navDisplayFlex}>
@@ -84,11 +91,11 @@ function Navbar() {
                   key: title,
                 }}
                 >
-                <MenuItem className={classes.linkText}>{title}</MenuItem>
+                <MenuItem className={classes.desktopLinkText}>{title}</MenuItem>
                 </Link>
               ))}
             </List>
-          </Container>
+            
         </Toolbar>
       </div>
     )
@@ -123,24 +130,29 @@ function Navbar() {
     return(
       <div>
         <Toolbar className={classes.navBar}>
-          <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
 
-          <IconButton edge="start" color="inherit" aria-label="menu" size="large" component={RouterLink} to='/'>
-              <HomeIcon size="large"/>
-            </IconButton>
+          <Typography variant="h6" className={classes.mobileTitle}>
+              Gravity Well
+            </Typography>
 
-            <IconButton
-            {...{
-              edge: "end",
-              color: "inherit",
-              "aria-label": "menu",
-              "aria-haspopup": "true",
-              style: {paddingLeft: "0px"},
-              onClick: handleDrawerOpen,
-            }}
-            >
-              <MenuIcon/>
-            </IconButton>
+            <div>
+              <IconButton edge="end" color="inherit" aria-label="menu" component={RouterLink} to='/'>
+                <HomeIcon/>
+              </IconButton>
+
+              <IconButton
+              {...{
+                edge: "end",
+                color: "inherit",
+                "aria-label": "menu",
+                "aria-haspopup": "true",
+                style: {textAlign: "right",},
+                onClick: handleDrawerOpen,
+              }}
+              >
+                <MenuIcon/>
+              </IconButton>
+            </div>
 
             <Drawer
               {...{
@@ -151,8 +163,6 @@ function Navbar() {
             >
               <div>{getDrawerChoices()}</div>
             </Drawer>
-
-          </Container>
         </Toolbar>
       </div>
     )

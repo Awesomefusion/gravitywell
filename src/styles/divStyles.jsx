@@ -12,6 +12,9 @@ const useStyles = makeStyles({
         padding: '1.6em',
         color: 'black',
     },
+    textDefault:{
+        marginTop: '1rem',
+    },
 });
 
 export { useStyles };
