@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Card, CardActionArea, CardContent, CardMedia  } from "@material-ui/core"
+import { Grid, Typography, Box, Card, CardActionArea, CardContent, CardMedia, Button  } from "@material-ui/core"
 import { useStyles } from '../styles/divStyles.jsx'
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
   return (
     <div>
 
-      <div className={classes.whiteDiv}>
+      <div className={classes.consDiv}>
         <Grid container direction="column">
           <Grid container>
 
@@ -29,6 +29,15 @@ function Home() {
                   Morbi varius faucibus tellus id bibendum. Quisque ac porttitor mi, eu eleifend diam. Donec condimentum mauris ac ipsum volutpat, et egestas lacus tincidunt. Duis tincidunt est massa, at ultricies tortor imperdiet eu. Proin at tortor dapibus nulla vehicula pharetra vel eu quam. Etiam mi eros, molestie gravida leo nec, commodo ultricies erat. Pellentesque iaculis tincidunt maximus. Fusce sed dolor quis libero aliquet laoreet non in risus. Curabitur eu ante et justo finibus pretium id rhoncus lectus. Duis urna ante, vulputate ut sagittis non, finibus sit amet tortor.
                 </Typography>
 
+                <Box align="center" className={classes.textDefault}>
+                  <Button variant="contained" color="primary" size="large" style={{margin: '1rem'}}>
+                    Buy today!
+                  </Button>
+                  <Button variant="contained" color="secondary" size="large">
+                    Pre-order Mk II
+                  </Button>
+                </Box>
+
               </Grid>
 
             <Grid item xs={0} md={1} lg={2}/>
@@ -37,7 +46,8 @@ function Home() {
         </Grid>
       </div>
 
-      <div className={classes.consDiv}>
+
+      <div className={classes.whiteDiv}>
         <Grid container direction="column">
           <Grid container>
 
@@ -48,14 +58,6 @@ function Home() {
                 <Typography className={classes.textDefault}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit sapien et aliquam malesuada. Praesent iaculis neque vitae purus varius, quis efficitur ex mattis. Quisque a elit consequat, consectetur turpis quis, scelerisque felis. Integer id ante ac quam sodales malesuada. Sed tincidunt leo non pretium vestibulum. Mauris massa erat, lobortis nec ante eu, rutrum sodales ex. Praesent viverra sit amet neque quis accumsan. Duis dignissim eros id sapien dictum dignissim. Ut et augue massa. Suspendisse placerat lorem eget consectetur blandit. Morbi sit amet enim tempor, accumsan ante sed, hendrerit sem.
                 </Typography>
-
-                <Card>
-                  <CardActionArea>
-                    <CardMedia
-                    
-                    />
-                  </CardActionArea>
-                </Card>
 
               </Grid>
 

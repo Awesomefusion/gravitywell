@@ -5,16 +5,7 @@ import App from './App';
 import '@fontsource/roboto';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
-
-const theme = createMuiTheme({
-  palette: {
-    background: {
-      default: "white"
-    }
-  }
-});
-
+import theme from './styles/theme'
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>

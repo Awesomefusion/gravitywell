@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
   root:{
   },
   navBar:{
-    backgroundColor: '#023e8a',
-    textDecoration: 'none',
+    backgroundColor: '#424242'
+
   },
   navDisplayFlex: {
     display: 'flex',
@@ -69,7 +69,7 @@ function Navbar() {
 
   const displayDesktop = () => {
     return (
-      <div>
+      <div className={classes.navBar}>
         <Toolbar className={classes.navBar}>
 
             <Typography variant="h4" className={classes.desktopTitle}>
@@ -128,7 +128,7 @@ function Navbar() {
     };
 
     return(
-      <div>
+      <div className={classes.navBar}>
         <Toolbar className={classes.navBar}>
 
           <Typography variant="h6" className={classes.mobileTitle}>
@@ -170,7 +170,7 @@ function Navbar() {
   
   return (
       <div>
-          <AppBar position="static">
+          <AppBar position="static" className={classes.navBar}>
             {mobileView ? displayMobile() : displayDesktop()}
           </AppBar>
       </div>
