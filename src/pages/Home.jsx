@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography  } from "@material-ui/core"
+import { Grid, Typography, Card, CardActionArea, CardContent, CardMedia  } from "@material-ui/core"
 import { useStyles } from '../styles/divStyles.jsx'
 
 function Home() {
@@ -7,7 +7,9 @@ function Home() {
   const classes = useStyles();
   
   return (
-    <div className={classes.whiteDiv}>
+    <div>
+
+      <div className={classes.whiteDiv}>
         <Grid container direction="column">
           <Grid container>
 
@@ -15,7 +17,11 @@ function Home() {
 
               <Grid item xs={12} md={10} lg={8}>
 
-                <Typography>
+                <Typography variant="h3">
+                  A new way to live in Space
+                </Typography>
+
+                <Typography className={classes.textDefault}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit sapien et aliquam malesuada. Praesent iaculis neque vitae purus varius, quis efficitur ex mattis. Quisque a elit consequat, consectetur turpis quis, scelerisque felis. Integer id ante ac quam sodales malesuada. Sed tincidunt leo non pretium vestibulum. Mauris massa erat, lobortis nec ante eu, rutrum sodales ex. Praesent viverra sit amet neque quis accumsan. Duis dignissim eros id sapien dictum dignissim. Ut et augue massa. Suspendisse placerat lorem eget consectetur blandit. Morbi sit amet enim tempor, accumsan ante sed, hendrerit sem.
                 </Typography>
 
@@ -29,6 +35,39 @@ function Home() {
 
           </Grid>
         </Grid>
+      </div>
+
+      <div className={classes.consDiv}>
+        <Grid container direction="column">
+          <Grid container>
+
+            <Grid item xs={0} md={1} lg={2}/>
+
+              <Grid item xs={12} md={10} lg={8}>
+
+                <Typography className={classes.textDefault}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit sapien et aliquam malesuada. Praesent iaculis neque vitae purus varius, quis efficitur ex mattis. Quisque a elit consequat, consectetur turpis quis, scelerisque felis. Integer id ante ac quam sodales malesuada. Sed tincidunt leo non pretium vestibulum. Mauris massa erat, lobortis nec ante eu, rutrum sodales ex. Praesent viverra sit amet neque quis accumsan. Duis dignissim eros id sapien dictum dignissim. Ut et augue massa. Suspendisse placerat lorem eget consectetur blandit. Morbi sit amet enim tempor, accumsan ante sed, hendrerit sem.
+                </Typography>
+
+                <Card>
+                  <CardActionArea>
+                    <CardMedia
+                    
+                    />
+                  </CardActionArea>
+                </Card>
+
+              </Grid>
+
+            <Grid item xs={0} md={1} lg={2}/>
+
+          </Grid>
+        </Grid>
+      </div>
+
+
+
+
     </div>
   );
 }
