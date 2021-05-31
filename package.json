@@ -1,6 +1,7 @@
 {
   "name": "gravitywell",
   "version": "0.1.0",
+  "homepage": "gravitywell.alexmould.net",
   "private": true,
   "dependencies": {
     "@fontsource/roboto": "^4.3.0",
