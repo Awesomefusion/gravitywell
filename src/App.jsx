@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom"
 
 import Navigation from "./components/Navbar"
 import ContentSwitch from "./components/ContentSwitch"
-
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
       <Router>
         <Navigation/>
         <ContentSwitch/>
+        <Footer/>
       </Router>
     </div>
   );

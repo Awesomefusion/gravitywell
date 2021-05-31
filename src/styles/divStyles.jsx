@@ -31,6 +31,14 @@ const useStyles = makeStyles({
         marginBottom: '1rem',
     },
     cardImage:{
+    },
+    formStyle:{
+        color: 'white',
+        width: '100%',
+        marginBottom: '0.5rem',
+    },
+    submitButton:{
+        color:'white',
     }
 });
 

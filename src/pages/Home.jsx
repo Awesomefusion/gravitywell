@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Box, Card, CardActionArea, CardContent, CardMedia, Button  } from "@material-ui/core"
+import { Grid, Typography, Box, Card, CardActionArea, CardContent, CardMedia, Button, FormControl, TextField } from "@material-ui/core"
 import { useStyles } from '../styles/divStyles.jsx'
 import station from '../img/station.jpg'
 import room from '../img/room.jpg'
@@ -110,7 +110,7 @@ function Home() {
         </Grid>
       </div>
 
-      <div className={classes.colourDivTwo}>
+      <div className={classes.consDiv}>
         <Grid container direction="column">
           <Grid container>
 
@@ -118,12 +118,42 @@ function Home() {
 
               <Grid item xs={12} md={10} lg={8}>
 
-                <Typography variant="h3" className={classes.textDefault} align="center" style={{color: 'white'}}>
+                <Typography variant="h3" className={classes.textDefault} align="center" style={{color: 'white', marginBottom: '5rem',}}>
                   Sign up to our Newsletter!
                 </Typography>
 
-                
+                <FormControl style={{width: '100%'}}>
+                  <TextField
+                    classes={{ root: classes.formStyle}}
+                    label="Name"
+                    variant="filled"
+                    InputProps={{
+                      className: classes.formStyle
+                    }}
+                    InputLabelProps={{ 
+                      className: classes.formStyle
+                    }}
+                  />
+                  <TextField
+                    classes={{ root: classes.formStyle}}
+                    label="Email"
+                    variant="filled"
+                    InputProps={{
+                      className: classes.formStyle
+                    }}
+                    InputLabelProps={{ 
+                      className: classes.formStyle
+                    }}
+                  />
 
+                </FormControl>  
+
+                <Box align="center" style={{marginTop:'2rem'}}>
+                  <Button color="primary" size="large" variant="contained" className={classes.submitButton}>
+                      Sign Up
+                  </Button>
+                </Box>
+                
               </Grid>
 
             <Grid item xs={0} md={1} lg={2}/>
