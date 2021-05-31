@@ -5,16 +5,33 @@ const useStyles = makeStyles({
     consDiv: {
         backgroundImage: `url(${consbg})`,
         padding: '1.6em',
-        color: 'white',
+        color: '#fffffe',
     },
-    whiteDiv: {
-        backgroundColor: 'white',
+    colourDiv: {
+        backgroundColor: '#242629',
         padding: '1.6em',
-        color: 'black',
+        color: '#94a1b2',
+    },
+    colourDivTwo: {
+        backgroundColor: '#16161a',
+        padding: '1.6em',
+        color: '#94a1b2',
     },
     textDefault:{
-        marginTop: '1rem',
+        marginBottom: '1rem',
     },
+    cardDefault:{
+        border: '2px solid',
+        boxShadow: 'none',
+        borderRadius: '15px',
+        elevation: 0,
+        backgroundColor: "transparent",
+        align: 'center',
+        margin: '5px',
+        marginBottom: '1rem',
+    },
+    cardImage:{
+    }
 });
 
 export { useStyles };
